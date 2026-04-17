@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.eurexchange.com/technology" targetNamespace="http://www.eurexchange.com/technology" elementFormDefault="qualified">
+	<xsd:include schemaLocation="prisma_report_data_types.xsd" />
+	<xsd:element name="cp020" minOccurs="1" maxOccurs="1">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="rptHdr" minOccurs="1" maxOccurs="1">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="clgHseInd3" type="clgHseInd3Type" minOccurs="1" maxOccurs="1" />
+							<xsd:element name="clgHseLglNam" type="clgHseLglNamType" minOccurs="1" maxOccurs="1" />
+							<xsd:element name="envText" type="envTextType" minOccurs="1" maxOccurs="1" />
+							<xsd:element name="rptCod" type="rptCodType" minOccurs="1" maxOccurs="1" />
+							<xsd:element name="rptNam" type="rptNamType" minOccurs="1" maxOccurs="1" />
+							<xsd:element name="rptFlexKey" type="rptFlexKeyType" minOccurs="0" maxOccurs="1" />
+							<xsd:element name="membId" type="membIdType" minOccurs="0" maxOccurs="1" />
+							<xsd:element name="membLglNam" type="membLglNamType" minOccurs="0" maxOccurs="1" />
+							<xsd:element name="rptPrntEffDat" type="rptPrntEffDatType" minOccurs="1" maxOccurs="1" />
+							<xsd:element name="rptPrntEffTim" type="rptPrntEffTimType" minOccurs="0" maxOccurs="1" />
+							<xsd:element name="rptPrntRunDat" type="rptPrntRunDatType" minOccurs="1" maxOccurs="1" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="cp020Grp" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="cp020KeyGrp" minOccurs="1" maxOccurs="1">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="membClgIdCod" type="membClgIdCodType" minOccurs="1" maxOccurs="1" />
+										<xsd:element name="membClgIdNam" type="membClgIdNamType" minOccurs="1" maxOccurs="1" />
+										<xsd:element name="cp020Grp1" minOccurs="1" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="cp020KeyGrp1" minOccurs="1" maxOccurs="1">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="membExchIdCod" type="membExchIdCodType" minOccurs="1" maxOccurs="1" />
+																<xsd:element name="membExchIdNam" type="membExchIdNamType" minOccurs="1" maxOccurs="1" />
+																<xsd:element name="cp020Grp2" minOccurs="1" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="cp020KeyGrp2" minOccurs="1" maxOccurs="1">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="liqGrpId" type="liqGrpIdType" minOccurs="1" maxOccurs="1" />
+																						<xsd:element name="liqGrpSplit" type="liqGrpSplitType" minOccurs="1" maxOccurs="1" />
+																						<xsd:element name="timToMat" type="timToMatType" minOccurs="1" maxOccurs="1" />
+																						<xsd:element name="subPortId" type="subPortIdType" minOccurs="1" maxOccurs="1" />
+																						<xsd:element name="acctTypGrp1" type="acctTypGrp1Type" minOccurs="1" maxOccurs="1" />
+																						<xsd:element name="currTypCod" type="currTypCodType" minOccurs="1" maxOccurs="1" />
+																						<xsd:element name="totInitMargin" type="totInitMarginType" minOccurs="1" maxOccurs="1" />
+																						<xsd:element name="cp020Grp3" minOccurs="1" maxOccurs="unbounded">
+																							<xsd:complexType>
+																								<xsd:sequence>
+																									<xsd:element name="cp020KeyGrp3" minOccurs="1" maxOccurs="1">
+																										<xsd:complexType>
+																											<xsd:sequence>
+																												<xsd:element name="busiIdent" type="busiIdentType" minOccurs="1" maxOccurs="1" />
+																												<xsd:element name="cp020Grp4" minOccurs="1" maxOccurs="unbounded">
+																													<xsd:complexType>
+																														<xsd:sequence>
+																															<xsd:element name="prodTypId" type="prodTypIdType" minOccurs="0" maxOccurs="1" />
+																															<xsd:element name="cp020KeyGrp4" minOccurs="1" maxOccurs="1">
+																																<xsd:complexType>
+																																	<xsd:sequence>
+																																		<xsd:element name="prodId" type="prodIdType" minOccurs="0" maxOccurs="1" />
+																																		<xsd:element name="cntrDtlGrp" minOccurs="0" maxOccurs="1">
+																																			<xsd:complexType>
+																																				<xsd:sequence>
+																																					<xsd:element name="cntrClasCod" type="cntrClasCodType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="uniqueCntrId" type="uniqueCntrIdType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="cntrDat" type="cntrDatType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="cntrMnemonic" type="cntrMnemonicType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="cntrExpYrDat" type="cntrExpYrDatType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="cntrExpMthDat" type="cntrExpMthDatType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="cntrExpDat" type="cntrExpDatType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="cntrExercisePrice" type="cntrExercisePriceType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="cntrVersNo" type="cntrVersNoType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="exerStylTyp" type="exerStylTypType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="setlTypCod" type="setlTypCodType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="flxOptCntrExerPrc" type="flxOptCntrExerPrcType" minOccurs="0" maxOccurs="1" />
+																																				</xsd:sequence>
+																																			</xsd:complexType>
+																																		</xsd:element>
+																																	</xsd:sequence>
+																																</xsd:complexType>
+																															</xsd:element>
+																															<xsd:element name="cp020KeyGrp4A" minOccurs="1" maxOccurs="1">
+																																<xsd:complexType>
+																																	<xsd:sequence>
+																																		<xsd:element name="OTCIRSTradID" type="OTCIRSTradIDType" minOccurs="0" maxOccurs="1" />
+																																		<xsd:element name="OTCIRSProdDesc" minOccurs="0" maxOccurs="1">
+																																			<xsd:complexType>
+																																				<xsd:sequence>
+																																					<xsd:element name="payLegNot" type="payLegNotType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="rcvLegNot" type="rcvLegNotType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="currTypCodA" type="currTypCodAType" minOccurs="0" maxOccurs="1" />
+																																				</xsd:sequence>
+																																			</xsd:complexType>
+																																		</xsd:element>
+																																	</xsd:sequence>
+																																</xsd:complexType>
+																															</xsd:element>
+																															<xsd:element name="cp020KeyGrp4B" minOccurs="1" maxOccurs="1">
+																																<xsd:complexType>
+																																	<xsd:sequence>
+																																		<xsd:element name="SecuISIN" type="SecuISINType" minOccurs="0" maxOccurs="1" />
+																																		<xsd:element name="cp020rec" minOccurs="1" maxOccurs="unbounded">
+																																			<xsd:complexType>
+																																				<xsd:sequence>
+																																					<xsd:element name="compVar" type="compVarType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="compCE" type="compCEType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="compCBA" type="compCBAType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="compLA" type="compLAType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="compLOC" type="compLOCType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="compPMA" type="compPMAType" minOccurs="0" maxOccurs="1" />
+																																					<xsd:element name="compIM" type="compIMType" minOccurs="0" maxOccurs="1" />
+																																				</xsd:sequence>
+																																			</xsd:complexType>
+																																		</xsd:element>
+																																	</xsd:sequence>
+																																</xsd:complexType>
+																															</xsd:element>
+																															<xsd:element name="totCompVarPerProd" type="totCompVarPerProdType" minOccurs="0" maxOccurs="1" />
+																															<xsd:element name="totCompCEPerProd" type="totCompCEPerProdType" minOccurs="0" maxOccurs="1" />
+																															<xsd:element name="totCompCBAPerProd" type="totCompCBAPerProdType" minOccurs="0" maxOccurs="1" />
+																															<xsd:element name="totCompLAPerProd" type="totCompLAPerProdType" minOccurs="0" maxOccurs="1" />
+																															<xsd:element name="totCompLOCPerProd" type="totCompLOCPerProdType" minOccurs="0" maxOccurs="1" />
+																															<xsd:element name="totCompPMAPerProd" type="totCompPMAPerProdType" minOccurs="0" maxOccurs="1" />
+																															<xsd:element name="totCompIMPerProd" type="totCompIMPerProdType" minOccurs="0" maxOccurs="1" />
+																														</xsd:sequence>
+																													</xsd:complexType>
+																												</xsd:element>
+																												<xsd:element name="totCompVar" type="totCompVarType" minOccurs="0" maxOccurs="1" />
+																												<xsd:element name="totCompCE" type="totCompCEType" minOccurs="0" maxOccurs="1" />
+																												<xsd:element name="totCompCBA" type="totCompCBAType" minOccurs="0" maxOccurs="1" />
+																												<xsd:element name="totCompLA" type="totCompLAType" minOccurs="0" maxOccurs="1" />
+																												<xsd:element name="totCompLOC" type="totCompLOCType" minOccurs="0" maxOccurs="1" />
+																												<xsd:element name="totCompPMA" type="totCompPMAType" minOccurs="0" maxOccurs="1" />
+																												<xsd:element name="totCompIM" type="totCompIMType" minOccurs="0" maxOccurs="1" />
+																											</xsd:sequence>
+																										</xsd:complexType>
+																									</xsd:element>
+																									<xsd:element name="totCompVarPerLgs" type="totCompVarPerLgsType" minOccurs="0" maxOccurs="1" />
+																									<xsd:element name="totCompCEPerLgs" type="totCompCEPerLgsType" minOccurs="0" maxOccurs="1" />
+																									<xsd:element name="totCompCBAPerLgs" type="totCompCBAPerLgsType" minOccurs="0" maxOccurs="1" />
+																									<xsd:element name="totCompLAPerLgs" type="totCompLAPerLgsType" minOccurs="0" maxOccurs="1" />
+																									<xsd:element name="totCompLOCPerLgs" type="totCompLOCPerLgsType" minOccurs="0" maxOccurs="1" />
+																									<xsd:element name="totCompPMAPerLgs" type="totCompPMAPerLgsType" minOccurs="0" maxOccurs="1" />
+																									<xsd:element name="totCompIMPerLgs" type="totCompIMPerLgsType" minOccurs="0" maxOccurs="1" />
+																								</xsd:sequence>
+																							</xsd:complexType>
+																						</xsd:element>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

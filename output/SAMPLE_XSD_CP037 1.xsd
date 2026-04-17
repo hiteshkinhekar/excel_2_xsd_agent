@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.eurexchange.com/technology" targetNamespace="http://www.eurexchange.com/technology" elementFormDefault="qualified">
+	<xsd:include schemaLocation="prisma_report_data_types.xsd" />
+	<xsd:element name="cp037" minOccurs="1" maxOccurs="1">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="rptHdr" minOccurs="1" maxOccurs="1">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="clgHseInd3" type="clgHseInd3Type" minOccurs="1" maxOccurs="1" />
+							<xsd:element name="clgHseLglNam" type="clgHseLglNamType" minOccurs="1" maxOccurs="1" />
+							<xsd:element name="envText" type="envTextType" minOccurs="1" maxOccurs="1" />
+							<xsd:element name="rptCod" type="rptCodType" minOccurs="1" maxOccurs="1" />
+							<xsd:element name="rptNam" type="rptNamType" minOccurs="1" maxOccurs="1" />
+							<xsd:element name="rptFlexKey" type="rptFlexKeyType" minOccurs="0" maxOccurs="1" />
+							<xsd:element name="membId" type="membIdType" minOccurs="0" maxOccurs="1" />
+							<xsd:element name="membLglNam" type="membLglNamType" minOccurs="0" maxOccurs="1" />
+							<xsd:element name="rptPrntEffDat" type="rptPrntEffDatType" minOccurs="1" maxOccurs="1" />
+							<xsd:element name="rptPrntEffTim" type="rptPrntEffTimType" minOccurs="0" maxOccurs="1" />
+							<xsd:element name="rptPrntRunDat" type="rptPrntRunDatType" minOccurs="1" maxOccurs="1" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="cp037Grp" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="cp037KeyGrp" minOccurs="1" maxOccurs="1">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="membClgIdCod" type="membClgIdCodType" minOccurs="1" maxOccurs="1" />
+										<xsd:element name="membClgIdNam" type="membClgIdNamType" minOccurs="1" maxOccurs="1" />
+										<xsd:element name="cp037Grp1" minOccurs="1" maxOccurs="unbounded">
+											<xsd:complexType>
+												<xsd:sequence>
+													<xsd:element name="cp037KeyGrp1" minOccurs="1" maxOccurs="1">
+														<xsd:complexType>
+															<xsd:sequence>
+																<xsd:element name="membExchIdCod" type="membExchIdCodType" minOccurs="1" maxOccurs="1" />
+																<xsd:element name="membExchIdNam" type="membExchIdNamType" minOccurs="1" maxOccurs="1" />
+																<xsd:element name="cp037Grp2" minOccurs="1" maxOccurs="unbounded">
+																	<xsd:complexType>
+																		<xsd:sequence>
+																			<xsd:element name="cp037KeyGrp2" minOccurs="1" maxOccurs="1">
+																				<xsd:complexType>
+																					<xsd:sequence>
+																						<xsd:element name="liqGrpId" type="liqGrpIdType" minOccurs="1" maxOccurs="1" />
+																						<xsd:element name="liqGrpSplit" type="liqGrpSplitType" minOccurs="1" maxOccurs="1" />
+																						<xsd:element name="subPortId" type="subPortIdType" minOccurs="1" maxOccurs="1" />
+																						<xsd:element name="acctTypGrp" type="acctTypGrpType" minOccurs="1" maxOccurs="1" />
+																						<xsd:element name="currTypCod" type="currTypCodType" minOccurs="1" maxOccurs="1" />
+																						<xsd:element name="cp037rec" minOccurs="1" maxOccurs="unbounded">
+																							<xsd:complexType>
+																								<xsd:sequence>
+																									<xsd:element name="simuMthd" type="simuMthdType" minOccurs="1" maxOccurs="1" />
+																									<xsd:element name="simuTyp" type="simuTypType" minOccurs="1" maxOccurs="1" />
+																									<xsd:element name="riskMeasure" type="riskMeasureType" minOccurs="1" maxOccurs="1" />
+																									<xsd:element name="confdItvl" type="confdItvlType" minOccurs="1" maxOccurs="1" />
+																									<xsd:element name="robstAchr" type="robstAchrType" minOccurs="1" maxOccurs="1" />
+																									<xsd:element name="sclFctr" type="sclFctrType" minOccurs="1" maxOccurs="1" />
+																									<xsd:element name="riskHorizon" type="riskHorizonType" minOccurs="1" maxOccurs="1" />
+																									<xsd:element name="cp037rec1" minOccurs="1" maxOccurs="30">
+																										<xsd:complexType>
+																											<xsd:sequence>
+																												<xsd:element name="scnGrpIdentifier" type="scnGrpIdentifierType" minOccurs="1" maxOccurs="1" />
+																												<xsd:element name="riskValue" type="riskValueType" minOccurs="1" maxOccurs="1" />
+																												<xsd:element name="scaledRiskValue" type="scaledRiskValueType" minOccurs="1" maxOccurs="1" />
+																												<xsd:element name="cp037rec2" minOccurs="1" maxOccurs="unbounded">
+																													<xsd:complexType>
+																														<xsd:sequence>
+																															<xsd:element name="tailScnID" type="tailScnIDType" minOccurs="1" maxOccurs="1" />
+																															<xsd:element name="tailScn" type="tailScnType" minOccurs="1" maxOccurs="1" />
+																														</xsd:sequence>
+																													</xsd:complexType>
+																												</xsd:element>
+																											</xsd:sequence>
+																										</xsd:complexType>
+																									</xsd:element>
+																								</xsd:sequence>
+																							</xsd:complexType>
+																						</xsd:element>
+																					</xsd:sequence>
+																				</xsd:complexType>
+																			</xsd:element>
+																		</xsd:sequence>
+																	</xsd:complexType>
+																</xsd:element>
+															</xsd:sequence>
+														</xsd:complexType>
+													</xsd:element>
+												</xsd:sequence>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
